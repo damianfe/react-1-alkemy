@@ -9,9 +9,10 @@ import Footer from './components/Footer';
 
 //Estilos
 import './css/bootstrap.min.css';
+/* import './css/app.css' */
 function App() {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <Header />
 
       <Switch>
