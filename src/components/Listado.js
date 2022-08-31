@@ -4,7 +4,7 @@ import axios from 'axios';
 function Listado() {
     let token = localStorage.getItem('token');
 
-    const [moviesList, setMoviesList]= useState([]);
+    const [moviesList, setMoviesList] = useState([]);
 
     useEffect(() => {
         const endPoint = 'https://api.themoviedb.org/3/discover/movie?api_key=9d25fdd4931257a1123675e1b83107e0&language=es-ES&page=1';
@@ -15,24 +15,32 @@ function Listado() {
             })
     }, [setMoviesList])
 
-    console.log(moviesList);
+
 
     return (
         <>
 
             { !token && <Redirect to="/" /> }
-            <div className='row'>
 
-                <div className="col-3" >
-                    <div className="card">
-                        <img src="..." class="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Movie title</h5>
-                            <p className="card-text">Review s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has</p>
-                            <Link href="/" className="btn btn-primary">view detail</Link>
-                        </div>
-                    </div>
-                </div>
+            <div className='row'>
+                {
+                    moviesList.map((oneMovie, idx) => {
+                        return (
+
+                            <div className="col-3" key={idx} >
+                                <div className="card" my-4>
+                                    <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} class="card-img-top" alt="..." />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{oneMovie.title.substring(0, 30)}...</h5>
+                                        <p className="card-text">{oneMovie.overview.substring(0, 100)}</p>
+                                        <Link to="/" className="btn btn-primary">view detail</Link>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+
 
             </div>
         </>
