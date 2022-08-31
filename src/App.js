@@ -1,10 +1,20 @@
+import {Switch,Route} from 'react-router-dom';
+
 
 import Login from './components/Login';
-import './App.css';
+import Listado from './components/Listado';
 
 function App() {
   return (
-   <Login/>
+    <>
+    <Switch>
+      <Route exact path="/" component={Login}/>
+      <Route path="/listado" component={Listado}/>
+
+    </Switch>
+    
+    </>
+   
   );
 }
 

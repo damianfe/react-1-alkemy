@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import swal from '@sweetalert/with-react'
-
+import swal from '@sweetalert/with-react';
+import{useHistory} from 'react-router-dom';
 function Login ()  {
+const history = useHistory();
+
 
 
     
@@ -37,6 +39,8 @@ function Login ()  {
             swal(<h2>Perfecto, Ingresaste Correctamente</h2>);
             const tokenR = res.data.token;
             localStorage.setItem('token', tokenR);
+            history.push('/listado');
+            
         })
     }
     return (
