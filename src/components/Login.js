@@ -1,7 +1,7 @@
-import React from 'react';
 import axios from 'axios';
 import swal from '@sweetalert/with-react';
 import{useHistory} from 'react-router-dom';
+
 function Login ()  {
 const history = useHistory();
 
@@ -45,6 +45,7 @@ const history = useHistory();
     }
     return (
         <>
+        
             <h2>Formulario de login</h2>
             <form onSubmit={ submitHandler }>
                 <label>
