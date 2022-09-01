@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 //Componentes
 import Login from './components/Login';
 import Listado from './components/Listado';
+import Detalle from './components/Detalle';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={ Login } />
         <Route path="/listado" component={ Listado } />
+        <Route path="/detalle" component={ Detalle } />
 
       </Switch>
       <Footer />

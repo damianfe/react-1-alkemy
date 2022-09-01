@@ -39,12 +39,12 @@ function Login() {
             .then(res => {
                 swal(<h2>Perfecto, Ingresaste Correctamente</h2>);
                 const tokenR = res.data.token;
-                localStorage.setItem('token', tokenR);
+                sessionStorage.setItem('token', tokenR);
                 history.push('/listado');
 
             })
     }
-    let token = localStorage.getItem('token');
+    let token = sessionStorage.getItem('token');
     return (
         <>
         {token && <Redirect to="/listado" /> }
