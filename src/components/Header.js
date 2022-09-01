@@ -1,5 +1,8 @@
 import{Link} from 'react-router-dom';
 
+//components
+ import Buscador from './Buscador';
+
 function Header (){
 return (
     
@@ -25,8 +28,8 @@ return (
             </ul>
 
            </div>
+           <Buscador/>
             </div>
-           
         </nav>
         </header>
     )

@@ -42,7 +42,7 @@ function Detalle() {
                     </div>
                     <div className='col-8'>
 
-                        <h5>Fecha de Estreno:{ movie.release_data }</h5>
+                        <h5>Fecha de Estreno:{ movie.release_date }</h5>
                         <h5>Reseña:</h5>
                         <p>{movie.overview}</p>
                         <h5>Rating: {movie.vote_average}</h5>
