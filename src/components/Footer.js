@@ -7,7 +7,7 @@ return(
                 <li><a href="http://instagram.com" rel="noopener noreferrer">IG</a></li>
             </ul>
         </nav>
-        <p>Copyright Alkemy Challenge</p>
+        <p>Copyright Damian Fernandez</p>
     </footer>
     )
 }
