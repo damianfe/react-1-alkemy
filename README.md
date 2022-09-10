@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 <img src="./public/listado.png" width=100%>
 
+## Product Detail
+<img src="./public/vista-detalle.png" width=100%>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
